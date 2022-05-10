@@ -11,7 +11,7 @@ module.exports = {
             return;
         }
     
-        let prefix = json.prefix;
+        let prefix = global.env.PREFIX;
         let messageArray = message.content.split(' ');
         let commandName = messageArray[0].substring(prefix.length);
         let prefixVerif = prefix === messageArray[0].substring(0, prefix.length);
